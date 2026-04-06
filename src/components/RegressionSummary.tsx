@@ -4,13 +4,17 @@ import { FEATURE_LABELS } from "@/lib/regression";
 export function RegressionSummary({ result }: { result: RegressionResult }) {
   return (
     <div className="bg-card rounded-lg border border-border p-6 space-y-4">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="bg-primary/10 rounded-lg p-4 text-center">
           <p className="text-sm text-muted-foreground">R²（判定係數）</p>
           <p className="text-3xl font-bold text-primary">{result.rSquared.toFixed(4)}</p>
           <p className="text-xs text-muted-foreground mt-1">
             {result.rSquared > 0.8 ? "模型解釋力很強" : result.rSquared > 0.5 ? "模型解釋力中等" : "模型解釋力較弱"}
           </p>
+        </div>
+        <div className="bg-primary/10 rounded-lg p-4 text-center">
+          <p className="text-sm text-muted-foreground">Adjusted R²</p>
+          <p className="text-3xl font-bold text-primary">{result.adjustedRSquared.toFixed(4)}</p>
         </div>
         <div className="bg-accent/10 rounded-lg p-4 text-center">
           <p className="text-sm text-muted-foreground">截距（Intercept）</p>
