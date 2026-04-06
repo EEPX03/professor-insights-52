@@ -99,7 +99,7 @@ const Index = () => {
         </section>
 
         <footer className="text-center text-sm text-muted-foreground py-8 border-t border-border">
-          資料來源：中正大學企管系 ｜ 迴歸模型於瀏覽器端以 JavaScript 計算
+          資料來源：中正大學企管系 ｜ 瀏覽數為真實資料 ｜ 迴歸模型於瀏覽器端以 JavaScript 計算
         </footer>
       </main>
     </div>
