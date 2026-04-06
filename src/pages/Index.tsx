@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { teacherData } from "@/data/teacherData";
-import { runRegression, FEATURE_LABELS } from "@/lib/regression";
+import { runRegression } from "@/lib/regression";
 import { VariableTable } from "@/components/VariableTable";
 import { PredictionTable } from "@/components/PredictionTable";
 import { ScatterChart } from "@/components/ScatterChart";
