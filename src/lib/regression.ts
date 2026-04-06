@@ -17,7 +17,7 @@ const FEATURE_KEYS = [
 export const FEATURE_LABELS: Record<string, string> = {
   wordCount: "字數",
   rankScore: "職級",
-  genderScore: "性別",
+  genderScore: "性別（男=1, 女=2）",
   photoClarity: "照片清晰度",
   appearance: "外在感知",
   researchCount: "研究領域數量",
@@ -93,7 +93,10 @@ function matVecMul(m: number[][], v: number[]): number[] {
 
 function invertMatrix(matrix: number[][]): number[][] {
   const n = matrix.length;
-  const aug: number[][] = matrix.map((row, i) => [
+  // Add ridge regularization to handle near-singular matrices
+  const reg = matrix.map((row, i) => row.map((val, j) => val + (i === j ? 0.001 : 0)));
+  
+  const aug: number[][] = reg.map((row, i) => [
     ...row,
     ...Array.from({ length: n }, (_, j) => (i === j ? 1 : 0)),
   ]);
@@ -107,7 +110,6 @@ function invertMatrix(matrix: number[][]): number[][] {
 
     const pivot = aug[col][col];
     if (Math.abs(pivot) < 1e-10) {
-      // Near-singular, use pseudo value
       aug[col][col] = 1e-10;
     }
     for (let j = 0; j < 2 * n; j++) aug[col][j] /= pivot;
