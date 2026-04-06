@@ -11,7 +11,7 @@ export interface TeacherData {
   rank: string;
   rankScore: number; // 教授=4, 副教授=3, 助理教授=2, 講師=1
   gender: string;
-  genderScore: number; // 男=0, 女=1
+  genderScore: number; // 男=1, 女=2
   photoClarity: number; // 0-100 AI 預估
   appearance: number; // 0-100 AI 預估（親切/專業感）
   researchCount: number;

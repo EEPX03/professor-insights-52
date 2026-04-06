@@ -17,7 +17,7 @@ const FEATURE_KEYS = [
 export const FEATURE_LABELS: Record<string, string> = {
   wordCount: "字數",
   rankScore: "職級",
-  genderScore: "性別",
+  genderScore: "性別（男=1, 女=2）",
   photoClarity: "照片清晰度",
   appearance: "外在感知",
   researchCount: "研究領域數量",
