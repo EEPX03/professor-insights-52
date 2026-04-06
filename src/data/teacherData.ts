@@ -60,6 +60,6 @@ export const teacherData: TeacherData[] = rawTeachers.map((t) => {
   return {
     ...t,
     rankScore,
-    genderScore: t.gender === "女" ? 1 : 0,
+    genderScore: t.gender === "女" ? 2 : 1,
   };
 });
