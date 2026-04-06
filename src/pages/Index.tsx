@@ -92,6 +92,14 @@ const Index = () => {
           <StatisticalAnalysis result={result} />
         </section>
 
+        {/* 5.6. Residual Diagnostics */}
+        <section>
+          <h2 className="text-xl font-semibold text-foreground mb-4">
+            📉 殘差診斷圖
+          </h2>
+          <ResidualPlots predictions={result.predictions} />
+        </section>
+
         {/* 6. Error Analysis */}
         <section>
           <h2 className="text-xl font-semibold text-foreground mb-4">
