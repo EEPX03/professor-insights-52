@@ -93,7 +93,10 @@ function matVecMul(m: number[][], v: number[]): number[] {
 
 function invertMatrix(matrix: number[][]): number[][] {
   const n = matrix.length;
-  const aug: number[][] = matrix.map((row, i) => [
+  // Add ridge regularization to handle near-singular matrices
+  const reg = matrix.map((row, i) => row.map((val, j) => val + (i === j ? 0.001 : 0)));
+  
+  const aug: number[][] = reg.map((row, i) => [
     ...row,
     ...Array.from({ length: n }, (_, j) => (i === j ? 1 : 0)),
   ]);
@@ -107,7 +110,6 @@ function invertMatrix(matrix: number[][]): number[][] {
 
     const pivot = aug[col][col];
     if (Math.abs(pivot) < 1e-10) {
-      // Near-singular, use pseudo value
       aug[col][col] = 1e-10;
     }
     for (let j = 0; j < 2 * n; j++) aug[col][j] /= pivot;
