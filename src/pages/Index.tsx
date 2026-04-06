@@ -8,6 +8,7 @@ import { CoefficientChart } from "@/components/CoefficientChart";
 import { RegressionSummary } from "@/components/RegressionSummary";
 import { ErrorAnalysis } from "@/components/ErrorAnalysis";
 import { CreativeRankings } from "@/components/CreativeRankings";
+import { StatisticalAnalysis } from "@/components/StatisticalAnalysis";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
