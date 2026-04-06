@@ -8,6 +8,7 @@ import { CoefficientChart } from "@/components/CoefficientChart";
 import { RegressionSummary } from "@/components/RegressionSummary";
 import { ErrorAnalysis } from "@/components/ErrorAnalysis";
 import { CreativeRankings } from "@/components/CreativeRankings";
+import { StatisticalAnalysis } from "@/components/StatisticalAnalysis";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
@@ -80,6 +81,14 @@ const Index = () => {
             📋 迴歸模型摘要
           </h2>
           <RegressionSummary result={result} />
+        </section>
+
+        {/* 5.5. ANOVA & Statistical Significance */}
+        <section>
+          <h2 className="text-xl font-semibold text-foreground mb-4">
+            📐 ANOVA 與顯著性分析
+          </h2>
+          <StatisticalAnalysis result={result} />
         </section>
 
         {/* 6. Error Analysis */}
