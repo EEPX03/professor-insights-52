@@ -8,6 +8,7 @@ import { CoefficientChart } from "@/components/CoefficientChart";
 import { RegressionSummary } from "@/components/RegressionSummary";
 import { ErrorAnalysis } from "@/components/ErrorAnalysis";
 import { CreativeRankings } from "@/components/CreativeRankings";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   const result = useMemo(() => runRegression(teacherData), []);
