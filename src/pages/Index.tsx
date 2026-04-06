@@ -9,6 +9,7 @@ import { RegressionSummary } from "@/components/RegressionSummary";
 import { ErrorAnalysis } from "@/components/ErrorAnalysis";
 import { CreativeRankings } from "@/components/CreativeRankings";
 import { StatisticalAnalysis } from "@/components/StatisticalAnalysis";
+import { ResidualPlots } from "@/components/ResidualPlots";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
