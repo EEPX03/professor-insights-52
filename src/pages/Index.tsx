@@ -9,6 +9,7 @@ import { RegressionSummary } from "@/components/RegressionSummary";
 import { ErrorAnalysis } from "@/components/ErrorAnalysis";
 import { CreativeRankings } from "@/components/CreativeRankings";
 import { StatisticalAnalysis } from "@/components/StatisticalAnalysis";
+import { ResidualPlots } from "@/components/ResidualPlots";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
@@ -89,6 +90,14 @@ const Index = () => {
             📐 ANOVA 與顯著性分析
           </h2>
           <StatisticalAnalysis result={result} />
+        </section>
+
+        {/* 5.6. Residual Diagnostics */}
+        <section>
+          <h2 className="text-xl font-semibold text-foreground mb-4">
+            📉 殘差診斷圖
+          </h2>
+          <ResidualPlots predictions={result.predictions} />
         </section>
 
         {/* 6. Error Analysis */}
