@@ -83,6 +83,14 @@ const Index = () => {
           <RegressionSummary result={result} />
         </section>
 
+        {/* 5.5. ANOVA & Statistical Significance */}
+        <section>
+          <h2 className="text-xl font-semibold text-foreground mb-4">
+            📐 ANOVA 與顯著性分析
+          </h2>
+          <StatisticalAnalysis result={result} />
+        </section>
+
         {/* 6. Error Analysis */}
         <section>
           <h2 className="text-xl font-semibold text-foreground mb-4">
