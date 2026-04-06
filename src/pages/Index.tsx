@@ -17,24 +17,27 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-card sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4">
-          <h1 className="text-2xl font-bold text-foreground">
-            中正大學企管系教師頁面瀏覽數預測模型
-          </h1>
-          <p className="text-sm text-muted-foreground mt-1">
-            資料來源：
-            <a
-              href="https://busadm.ccu.edu.tw/p/412-1248-3236.php?Lang=zh-tw"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary underline"
-            >
-              中正大學企管系專任教師
-            </a>
-            <span className="ml-3 text-accent font-medium">
-              ⚠ 部分資料為 AI 預估（照片清晰度、外在感知、笑容程度、瀏覽數）
-            </span>
-          </p>
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-bold text-foreground">
+              中正大學企管系教師頁面瀏覽數預測模型
+            </h1>
+            <p className="text-sm text-muted-foreground mt-1">
+              資料來源：
+              <a
+                href="https://busadm.ccu.edu.tw/p/412-1248-3236.php?Lang=zh-tw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline"
+              >
+                中正大學企管系專任教師
+              </a>
+              <span className="ml-3 text-accent font-medium">
+                ⚠ 瀏覽數為真實資料，部分資料為 AI 預估（照片清晰度、外在感知、笑容程度）
+              </span>
+            </p>
+          </div>
+          <ThemeToggle />
         </div>
       </header>
 
